@@ -16,4 +16,5 @@ Install the required libraries by typing the following commands in your Windows 
 pip install requests
 pip install discord.py
 pip install python-dotenv
+pip install icalendar
 ```
