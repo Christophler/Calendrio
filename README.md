@@ -1,5 +1,4 @@
 # Calendrio
-## Summary
 Discord bot that reminds the user of any upcoming events using an input of a .ics file, .iCalendar file, or calendar download URL.
 
 ## Inspiration
