@@ -7,7 +7,7 @@ I would often get too caught up in school and would end up neglecting to check m
 
 ## Technical Dependencies
 The bot runs on a Python backend that is hosted on Repl.it and UpTimeRobot to stay operational 24/7.\
-It uses the requests, discord, dotenv, and icalendar Python modules.
+It uses the requests, discord, dotenv, and icalendar Python libraries.
 
 
 ## How to run it locally

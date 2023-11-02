@@ -11,17 +11,29 @@ from pytz import UTC
 # https://www.tutorialspoint.com/downloading-files-from-web-using-python
 import requests
 
-from collections import defaultdict
-
 
 class Calendar():
-    print("Test")
-    # Class constructor
     def __init__(self, calendar_url, event_dict=None):
+        """ Class constructor. """
         self.calendar_url = calendar_url
         self.event_dict = event_dict
 
+    
+    def set_event_dict(self, value):
+        """ Setter for the dictionary that holds all the calendar's event information. """
+        self.event_dict = value
+
+
+    def get_event_dict(self):
+        """ Getter for the dictionary that holds all the calendar's event information. """
+        return self.event_dict
+    
+
+
     def read_calendar_url(self):
+        """ Reads a calendar using the object's calendar URL.
+        Returns a dictionary with all the events and their important information.
+        """
         # Initializing a dictionary to store all the event important details
         event_dict = {'Summary': [],
                       'Description' : [],
@@ -52,11 +64,3 @@ class Calendar():
         #         print("Value: ", value)
 
         return event_dict
-
-    # Setting the dictionary
-    def set_event_dict(self):
-        self.event_dict = self.read_calendar_url()
-
-    def get_event_dict(self):
-        self.set_event_dict()
-        return self.event_dict
