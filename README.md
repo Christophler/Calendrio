@@ -17,3 +17,8 @@ pip install discord.py
 pip install python-dotenv
 pip install icalendar
 ```
+
+The run the following command in your terminal.
+```
+python -u <Insert your directory of where this project is stored>\Calendrio\main.py
+```
