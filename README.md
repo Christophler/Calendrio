@@ -6,7 +6,7 @@ I would often get too caught up in school and would end up neglecting to check m
 
 ## Technical Dependencies
 The bot runs on a Python backend that is hosted on Repl.it and UpTimeRobot to stay operational 24/7.\
-It uses the requests, discord, dotenv, and icalendar Python libraries.
+It uses the requests, discord, dotenv, icalendar, datetime and pytz Python libraries.
 
 
 ## How to run it locally
@@ -18,7 +18,7 @@ pip install python-dotenv
 pip install icalendar
 ```
 
-The run the following command in your terminal.
+Then run the following command in your terminal.
 ```
 python -u <Insert your directory of where this project is stored>\Calendrio\main.py
 ```
