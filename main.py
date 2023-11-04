@@ -3,7 +3,9 @@ from calendar_functions.compare_dates import *
 
 
 def main():
-    """ Creates a calendar object and checks how many days there are until each event ends. """
+    """ Creates a calendar object and checks how many days there are until each event ends. 
+    
+    """
     # Testing
     calendar_url = input("Enter the calendar download url: ")
 
@@ -24,7 +26,10 @@ def main():
         counter = 0
         if key == "Date End":
             for value in event_dict[key]:
-                print("%s for the following event: \t%s. \n" % (compare_date_time(value), event_dict['Summary'][counter]))
+                remaining_time = compare_date_time(value)
+                # Only print 
+                if remaining_time != None:
+                    print("%s: \t%s. \n" % (compare_date_time(value), event_dict['Summary'][counter]))
                 counter += 1
 
 

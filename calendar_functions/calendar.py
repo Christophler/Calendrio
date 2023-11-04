@@ -64,3 +64,10 @@ class Calendar():
         #         print("Value: ", value)
 
         return event_dict
+
+
+    def add_event(self, info_list):
+        counter = 0
+        for key in self.event_dict.keys():
+            self.event_dict[key].append(info_list[counter])
+            counter += 1
