@@ -3,9 +3,7 @@ from calendar_functions.compare_dates import *
 
 
 def main():
-    """ Creates a calendar object and checks how many days there are until each event ends. 
-    
-    """
+    """ Creates a calendar object and checks how many days there are until each event ends. """
     # Testing
     calendar_url = input("Enter the calendar download url: ")
 

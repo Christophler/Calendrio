@@ -67,6 +67,7 @@ class Calendar():
 
 
     def add_event(self, info_list):
+        """ Adds an event to the event_dict. """
         counter = 0
         for key in self.event_dict.keys():
             self.event_dict[key].append(info_list[counter])
