@@ -11,6 +11,9 @@ def compare_date_time(comparisondt):
     # Setting both of the datetime objects to aware to compare them
     utc = pytz.UTC
     now = utc.localize(datetime.now())
+    # Checking if the comparison datetime object is naive. If it is, make it aware.
+    if comparisondt.tzinfo == None or comparisondt.tzinfo.utcoffset(comparisondt) == None:
+        comparisondt = utc.localize(comparisondt)
 
     # Comparing the passed datetime object to the current time
     if comparisondt > now:

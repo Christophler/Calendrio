@@ -71,4 +71,44 @@ class Calendar():
         counter = 0
         for key in self.event_dict.keys():
             self.event_dict[key].append(info_list[counter])
+            # print(self.event_dict[key], "\t")
             counter += 1
+
+
+    def remove_event(self, event_summary):
+        """ Deletes an event from the event_dict given the summary. """
+        found = False
+        counter = 0
+        # Checks if the event exists within the event_dict
+        for value in self.event_dict['Summary']:
+            if value == event_summary:
+                found = True
+                break
+            counter += 1
+
+        if found:
+            for key in self.event_dict.keys():
+                self.event_dict[key].pop(counter)
+
+    
+    def get_event_info(self, event_summary):
+        """ Gets the information of a specific event given the summary. 
+        Returns the event information or that the event wasn't found.
+        """
+        found = False
+        counter = 0
+        event_info = []
+
+        # Checks if the event_summary is within the event_dict
+        for value in self.event_dict['Summary']:
+            if value == event_summary:
+                found = True
+                break
+            counter += 1
+
+        # Outputting the specific event info or that the event wasn't found
+        if found:
+            for key in self.event_dict.keys():
+                event_info.append(self.event_dict[key][counter])
+            return ("Summary: %s\nDescription: %s\nStart Date: %s\nEnd Date: %s" % (event_info[0], event_info[1], event_info[2], event_info[3]))
+        return "The event wasn't found"
